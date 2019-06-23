@@ -1,0 +1,15 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Stack that launches a single t2.micro for me with my dev lab settings.",
+  "Resources" : {
+    "EC2Instance" : {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "InstanceType" : "t2.micro",
+        "SecurityGroups" : [ "personal-dev" ],
+        "KeyName" : "aws_localgen",
+        "ImageId" : "ami-0cc96feef8c6bbff3"
+      }
+    }
+  }
+}
